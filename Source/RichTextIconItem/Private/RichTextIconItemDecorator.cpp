@@ -21,31 +21,31 @@ public:
 			float BoxHeight = Height;
 
 			ChildSlot
-				[
-					SNew(SHorizontalBox)
-					+ SHorizontalBox::Slot()
+			[
+				SNew(SHorizontalBox)
+				+ SHorizontalBox::Slot()
 				.AutoWidth()
 				.Padding(10.0f)
 				[
 					SNew(SBox)
 					.WidthOverride(BoxHeight)
-				.HeightOverride(BoxHeight)
-				[
-					SNew(SImage)
-					.Image(Brush)
+					.HeightOverride(BoxHeight)
+					[
+						SNew(SImage)
+						.Image(Brush)
+					]
 				]
-				]
-			+ SHorizontalBox::Slot()
+				+ SHorizontalBox::Slot()
 				.AutoWidth()
 				.Padding(10.0f)
 				.VAlign(EVerticalAlignment::VAlign_Center)
 				[
 					SNew(STextBlock)
 					.Text(Content)
-				.Font(FontInfo)
-				.ColorAndOpacity(FSlateColor(FLinearColor::White))
+					.Font(FontInfo)
+					.ColorAndOpacity(FSlateColor(FLinearColor::White))
 				]
-				];
+			];
 		}
 	}
 };
